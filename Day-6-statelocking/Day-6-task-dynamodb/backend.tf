@@ -1,10 +1,10 @@
 terraform {
   backend "s3" {
-    bucket = "veeranareshitdev"
-    key    = "day-4/terraform.tfstate"
-    region = "us-east-1"
+    bucket = "feelinggoodmix"
+    key    = "terraform.tfstate"
+    region = "ap-south-1"
     # Enable S3 native locking
-    #use_lockfile = true   #tf version should be above 1.10
+    use_lockfile = true   #tf version should be above 1.10
     # The dynamodb_table argument is no longer needed
     dynamodb_table = "terraform-state-lock-dynamo"
 
