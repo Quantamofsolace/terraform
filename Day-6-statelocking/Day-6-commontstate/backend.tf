@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket = "feelinggoodmix"
     key    = "terraform.tfstate" # if same path already used in different directory not a good parctice to use here.
-    key   = "Day-6-statelocking/terraform.tfstate" # this is the best practice to use different path for different project in same bucket.
+    # key   = "Day-6-statelocking/terraform.tfstate" # this is the best practice to use different path for different project in same bucket.
     region = "ap-south-1"
   }
 }
