@@ -41,14 +41,17 @@ resource "aws_route_table" "demo_route_table" { #creation of route table
         Name = "demo_route_table" #name tag for the route table
     }
 }
+#associating the route table with the subnets
 resource "aws_route_table_association" "demo_route_table_association" { #associating the route table with the first subnet
     subnet_id = aws_subnet.demo_subnet.id #associate the route table with the first subnet
     route_table_id = aws_route_table.demo_route_table.id #associate the route table with the first subnet
 }
+#associating the route table with the second subnet
 resource "aws_route_table_association" "demo_route_table_association2" { #associating the route table with the second subnet
     subnet_id = aws_subnet.demo_subnet2.id #associate the route table with the second subnet
     route_table_id = aws_route_table.demo_route_table.id #associate the route table with the second subnet
 }
+#creation of security group and EC2 instance
 resource "aws_security_group" "demo_sg" { #creation of security group
     name = "demo_sg" #name of the security group
     description = "Allow SSH and HTTP" #description of the security group
