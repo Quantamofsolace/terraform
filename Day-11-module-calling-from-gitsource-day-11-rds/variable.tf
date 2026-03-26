@@ -1,8 +1,8 @@
 variable "db_username" {
-    default = ""
-  
+  default = ""
+
 }
 variable "db_allocated_storage" {
-    default = ""
-  
+  default = ""
+
 }
