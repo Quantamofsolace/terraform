@@ -9,4 +9,4 @@
 .terraform.lock.hcl
 # documents
 *.do
-
+*.zip
