@@ -1,0 +1,37 @@
+variable "aws_region" {
+  description = "AWS region to deploy resources"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "project_name" {
+  description = "Project name prefix used for tagging"
+  type        = string
+  default     = "three-tier"
+}
+
+variable "ami" {
+  description = "AMI ID for the bastion host"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "EC2 instance type for the bastion host"
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "key_name" {
+  description = "EC2 key pair name for SSH access"
+  type        = string
+}
+
+variable "subnet_id" {
+  description = "Public subnet ID where the bastion host will be launched"
+  type        = string
+}
+
+variable "security_group_id" {
+  description = "Security group ID to attach to the bastion host"
+  type        = string
+}
